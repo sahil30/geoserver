@@ -19,6 +19,8 @@ RUN which java
 
 ENV GEOSERVER_HOME /geoserver-2.13.2/
 
-RUN sh /geoserver-2.13.2/bin/startup.sh &
+CMD [ "sh","/geoserver-2.13.2/bin/startup.sh","&"]
+
+RUN ps aux
 
 EXPOSE 8080
